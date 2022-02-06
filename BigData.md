@@ -74,7 +74,7 @@ Pesquisa (CodPesquisa, Ano, Poluente, Quantidade, Metodologia)
 
 
 
-**6. INSERÇÕES**
+**4. INSERÇÕES**
 
 Abaixo estará um exemplo de inserção para cada tabela do BigData:
 
@@ -96,7 +96,7 @@ insert into Pesquisa (codPesquisa, ano, poluente, metodologia, quantidade) value
 
 
 
-**6.SQLS AVANÇADAS** 
+**5.SQLS AVANÇADAS** 
 
 ```sql
 select ano, SUM(quantidade) as Total from Pesquisa group by ano;
