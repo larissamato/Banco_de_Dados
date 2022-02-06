@@ -1,11 +1,10 @@
-**1.INTRODUÇÃO**
+## 1.INTRODUÇÃO
 
 ​	Esse documento apresenta informações sobre o banco de dados do projeto Big Data, sendo elas, descrições gerais, dicionário de dados, modelo entidade relacionamento, esquema relacional, normalização, exemplos de inserções, SQLs avançadas e suas representações gráficas. Os dados obtidos são de uma base aberta do IBAMA denominado: Emissões de Poluentes Atmosféricos por meio de um arquivo de extensão .csv.
 
 ​	As informações tratadas se referem a pessoas jurídicas cadastradas por município no formulário Técnico Federal de Atividades Potencialmente Poluidoras e Utilizadoras de Recursos Naturais – CTF/APP, juntamente com a sua atividade desenvolvida, situação cadastral, poluentes emitidos, suas quantidades, e por fim, a metodologia utilizada para obter esses dados.
 
-
- **2.DICIONÁRIO DE DADOS**
+## 2.DICIONÁRIO DE DADOS
 
 **Local**
 
@@ -46,7 +45,7 @@
 
 
 
-**3.NORMALIZAÇÃO**
+## 3.NORMALIZAÇÃO
 
 ​	A normalização foi realizada a partir da tabela obtida na base de dados abertos, sendo ela: Tabela Relatório (Cnpj, Razão Social, Estado, Município, Categoria de Atividade, Código do Detalhe, Segmento , Ano, Poluente emitido, Quantidade, Metodologia utilizada, Situação Cadastral).
 
@@ -74,7 +73,7 @@ Pesquisa (CodPesquisa, Ano, Poluente, Quantidade, Metodologia)
 
 
 
-**4. INSERÇÕES**
+## 4.INSERÇÕES
 
 Abaixo estará um exemplo de inserção para cada tabela do BigData:
 
@@ -96,7 +95,7 @@ insert into Pesquisa (codPesquisa, ano, poluente, metodologia, quantidade) value
 
 
 
-**5.SQLS AVANÇADAS** 
+## 5.SQLS AVANÇADAS
 
 ```sql
 select ano, SUM(quantidade) as Total from Pesquisa group by ano;
