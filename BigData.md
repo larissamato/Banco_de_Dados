@@ -46,19 +46,7 @@
 
 
 
-**3.** **DIAGRAMA DO** **MODELO ENTIDADE RELACIONAMENTO**
-
-![](/home/larissa/Imagens/Projeto/merBigData.png)
-
-
-
-**4.ESQUEMA RELACIONAL**
-
-![](/home/larissa/Imagens/Esquema Relacional.png)
-
-
-
-**5.NORMALIZAÇÃO**
+**3.NORMALIZAÇÃO**
 
 ​	A normalização foi realizada a partir da tabela obtida na base de dados abertos, sendo ela: Tabela Relatório (Cnpj, Razão Social, Estado, Município, Categoria de Atividade, Código do Detalhe, Segmento , Ano, Poluente emitido, Quantidade, Metodologia utilizada, Situação Cadastral).
 
@@ -125,18 +113,6 @@ select p.quantidade as Total, e.nome as Nome,p.ano as Ano, p.poluente as Poluent
 
 ORDER BY Total DESC;
 ```
-
-
-
-**7. GRÁFICOS DO CENTRO-OESTE**
-
-![Centro-Oeste](/home/larissa/Downloads/TOTAL DE EMISSÕES T_ANO.png)
-
-![](/home/larissa/Downloads/PERCENTUAL DE EMPRESAS POR ESTADO .png)
-
-
-
-![](/home/larissa/Downloads/EMPRESAS COM AS MAIORES EMISSÕES DE POLUENTES DE 2020 .png)
 
 
 
