@@ -71,9 +71,21 @@ Pesquisa (CodPesquisa, Ano, Poluente, Quantidade, Metodologia)
 
 ​	Logo depois dessa mudança todas as tabelas se apresentam na segunda forma normal, por não terem chaves primárias compostas.
 
+## 4. CRIAÇÃO
+
+```sql
+create table Local(codLocal int, estado varchar(30), cidade varchar(50),primary key(codLocal));
+
+create table Empresa (cnpj Varchar(18), nome varchar(70), categoria varchar(70),codLocalRef int, primary key(cnpj),Foreign Key(codLocalRef) REFERENCES Local(codLocal));
+
+create table Detalhe(codDetalhe int, codEmpresaRef Varchar(18),segmento varchar(300),situacao varchar(30),  codPesquisaRef int, primary key(codDetalhe), Foreign Key (codEmpresaRef) REFERENCES Empresa(cnpj), Foreign Key(codPesquisaRef) REFERENCES Pesquisa(codPesquisa));
+
+create table Pesquisa (codPesquisa int, ano int, poluente varchar(30),metodologia varchar(10), quantidade float, primary key (codPesquisa));
+```
 
 
-## 4.INSERÇÕES
+
+## 5.INSERÇÕES
 
 Abaixo estará um exemplo de inserção para cada tabela do BigData:
 
@@ -95,7 +107,7 @@ insert into Pesquisa (codPesquisa, ano, poluente, metodologia, quantidade) value
 
 
 
-## 5.SQLS AVANÇADAS
+## 6.SQLS AVANÇADAS
 
 ```sql
 select ano, SUM(quantidade) as Total from Pesquisa group by ano;
